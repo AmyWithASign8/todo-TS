@@ -1,6 +1,7 @@
 import { githubApi } from "./github/github.api";
 import { configureStore } from "@reduxjs/toolkit";
 import { getDefaultCompilerOptions } from "typescript";
+import { setupListeners } from "@reduxjs/toolkit/dist/query";
 
 export const store = configureStore({
   reducer: {
@@ -9,3 +10,5 @@ export const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(githubApi.middleware),
 });
+
+setupListeners(store.dispatch);
