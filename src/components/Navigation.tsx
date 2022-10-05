@@ -10,7 +10,7 @@ function Navigation() {
         <Link to="/" className="mr-2 ">
           Home
         </Link>
-        <Link to="/favourite">Fovourites</Link>
+        <Link to="/favourite">Favourites</Link>
       </span>
     </nav>
   );
